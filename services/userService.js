@@ -2,10 +2,7 @@ import models from "../models";
 import { NotFound } from "../utils/errors";
 
 export const saveUser = async (user) => {
-    const model = new models.User({
-        username: user.username,
-        createdAt: new Date()
-    });
+    const model = new models.User(user);
 
     const savedUser = await model.save();
     return savedUser;
