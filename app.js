@@ -9,8 +9,8 @@ import winstonMongo from 'winston-mongodb';
 import { ElasticsearchTransport} from 'winston-elasticsearch';
 
 
-const PORT = 3001;
-const app = express();
+// const PORT = 3001;
+ const app = express();
 
 app.use(express.json());
 
@@ -100,7 +100,6 @@ app.use(errorLogger);
 
 app.use(handleErrors);
 
-app.listen(PORT, () => {
-    console.log(`Listening to port ${PORT}`);
-});
 
+
+export default app;
