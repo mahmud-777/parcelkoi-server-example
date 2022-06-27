@@ -4,27 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "jest",
-=======
-    "test": "echo \"Error: no test specified\" && exit 1",
->>>>>>> b6cad2d35cad4340d23f7d3346d49be4dfd98abb
     "start": "nodemon -r esm server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-   
+    "dotenv": "^16.0.1",
     "esm": "^3.2.25",
     "express": "^4.17.3",
-    "express-winston": "^4.2.0",   
+    "express-winston": "^4.2.0",
     "joi": "^17.6.0",
     "mongoose": "^6.2.4",
-    "nodemon": "^2.0.15",   
+    "nodemon": "^2.0.15",
     "winston": "^3.6.0",
     "winston-daily-rotate-file": "^4.6.1",
     "winston-elasticsearch": "^0.16.1",
     "winston-mongodb": "^5.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "superagent": "^8.0.0",
+    "supertest": "^6.2.3"
   }
 }

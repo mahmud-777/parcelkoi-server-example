@@ -12,7 +12,7 @@ export const connectWithDb = () => {
             // console.error(err);
             throw err;
         }
-        // else log("database connection established");
+         else log("database connection established");
     })
 }
 
