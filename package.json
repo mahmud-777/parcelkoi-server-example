@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "nodemon -r esm server.js"
+    "test": "jest --runInBand --force-exit",
+    "start": "nodemon --inspect=0.0.0.0 -r esm ./src/server.js"
   },
   "keywords": [],
   "author": "",
