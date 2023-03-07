@@ -1,9 +1,9 @@
-import express from 'express';
-import {  infoLogger} from "./logger"
-import configure from './controllers';
-import { handleRequest, handleError } from './middlewares/index';
+import express from "express";
+import { infoLogger } from "./logger";
+import configureRoutes from "./controllers";
+import { handleRequest, handleError } from "./middlewares/index";
 
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 dotenv.config();
 
 // const PORT = 3001;
@@ -21,11 +21,9 @@ app.use(handleRequest);
 // const log = (msg) => console.log(msg);
 // connectWithDb();
 
-if(process.env.ENVIRONMENT != 'TEST')
-   app.use(infoLogger);
+if (process.env.ENVIRONMENT != "TEST") app.use(infoLogger());
 
-configure(app);
-
+configureRoutes(app);
 // if(process.env.ENVIRONMENT != 'TEST')
 //    app.use(errorLogger(uri));
 

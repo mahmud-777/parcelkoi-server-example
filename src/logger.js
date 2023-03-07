@@ -46,10 +46,10 @@ export const infoLogger = () =>
     transports: [
       new winston.transports.Console(),
       //  fileInfoTransport,
-      new winston.transports.DailyRotateFile({
-        filename: "log-info-%DATE%.log",
-        datePattern: "yyyy-MM-DD-HH",
-      }),
+      // new winston.transports.DailyRotateFile({
+      //   filename: "log-info-%DATE%.log",
+      //   datePattern: "yyyy-MM-DD-HH",
+      // }),
       esTransport,
     ],
     format: winston.format.combine(
@@ -69,10 +69,10 @@ export const errorLogger = (uri) =>
     transports: [
       new winston.transports.Console(),
       // fileErrorTransport,
-      new winston.transports.DailyRotateFile({
-        filename: "log-error-%DATE%.log",
-        datePattern: "yyyy-MM-DD-HH",
-      }),
+      // new winston.transports.DailyRotateFile({
+      //   filename: "log-error-%DATE%.log",
+      //   datePattern: "yyyy-MM-DD-HH",
+      // }),
       mongoErrorTransport(uri),
       esTransport,
     ],
